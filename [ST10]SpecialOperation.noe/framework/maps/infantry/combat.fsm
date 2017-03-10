@@ -1,0 +1,205 @@
+/*%FSM<COMPILE "D:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, patrol">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"start",0,250,0.000000,0.000000,68.934029,42.719757,0.000000,"start"};
+item1[] = {"isClient",4,218,86.087105,-3.432228,176.087112,46.567772,0.000000,"isClient"};
+item2[] = {"Exit_not_server",1,250,193.822571,-3.316039,283.822632,46.683945,0.000000,"Exit not" \n "server"};
+item3[] = {"is_Server",4,218,-10.875050,59.021904,79.124985,109.021896,0.000000,"is Server"};
+item4[] = {"init_state",2,250,-9.209723,165.973572,80.790298,215.973572,0.000000,"init" \n "state"};
+item5[] = {"_",8,218,-10.188909,259.779358,79.811089,309.779358,0.000000,"" \n ""};
+item6[] = {"check_state",2,250,-9.610050,369.380066,80.389984,419.380066,0.000000,"check state"};
+item7[] = {"not_fighting",4,4314,138.659607,370.350464,228.659607,420.350464,3.000000,"not fighting"};
+item8[] = {"patrol",1,250,278.003357,370.343109,368.003387,420.343079,0.000000,"patrol"};
+item9[] = {"maps_end",4,218,-8.712147,455.259003,81.287857,505.259003,2.000000,"maps_end"};
+item10[] = {"group_null",4,218,-155.696472,410.080811,-65.696365,460.081207,0.000000,"group null"};
+item11[] = {"all_dead",4,218,-153.106506,335.587646,-63.106094,385.588013,1.000000,"all dead"};
+item12[] = {"dead",1,250,-264.216553,370.916473,-174.216385,420.916748,0.000000,"dead"};
+item13[] = {"delete_waypoints",1,250,-21.390148,536.081299,93.173569,601.928833,0.000000,"delete waypoints"};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {6,9};
+link8[] = {6,10};
+link9[] = {6,11};
+link10[] = {7,8};
+link11[] = {9,13};
+link12[] = {10,12};
+link13[] = {11,12};
+globals[] = {0.000000,0,0,0,0,640,480,1,143,6316128,1,-386.044464,526.764404,620.722595,-107.446342,1142,911,1};
+window[] = {2,-1,-1,-1,-1,887,150,876,150,3,1160};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "patrol";
+  class States
+  {
+    /*%FSM<STATE "start">*/
+    class start
+    {
+      name = "start";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "is_Server">*/
+        class is_Server
+        {
+          priority = 0.000000;
+          to="init_state";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "isClient">*/
+        class isClient
+        {
+          priority = 0.000000;
+          to="Exit_not_server";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"not isServer && local player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Exit_not_server">*/
+    class Exit_not_server
+    {
+      name = "Exit_not_server";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "init_state">*/
+    class init_state
+    {
+      name = "init_state";
+      init = /*%FSM<STATEINIT""">*/"private[""_grp"",""_array""];" \n
+       "_grp = _this select 0;" \n
+       "_array = _this select 1;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="check_state";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "check_state">*/
+    class check_state
+    {
+      name = "check_state";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "not_fighting">*/
+        class not_fighting
+        {
+          priority = 3.000000;
+          to="patrol";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!((leader _grp) call BIS_fnc_enemyDetected)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "maps_end">*/
+        class maps_end
+        {
+          priority = 2.000000;
+          to="delete_waypoints";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_grp getVariable[""maps_end"", false]"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "all_dead">*/
+        class all_dead
+        {
+          priority = 1.000000;
+          to="dead";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count units _grp == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "group_null">*/
+        class group_null
+        {
+          priority = 0.000000;
+          to="dead";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull _grp"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "patrol">*/
+    class patrol
+    {
+      name = "patrol";
+      init = /*%FSM<STATEINIT""">*/"_old = _grp;" \n
+       "_grp = [_old]call  FNC_BUGFIX_changeGroup;" \n
+       "" \n
+       "[_grp, _array]execVM ""framework\maps\infantry\patrol.sqf"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "dead">*/
+    class dead
+    {
+      name = "dead";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "delete_waypoints">*/
+    class delete_waypoints
+    {
+      name = "delete_waypoints";
+      init = /*%FSM<STATEINIT""">*/"while{(count (waypoints _grp)) > 0} do " \n
+       "{ " \n
+       "	deleteWaypoint ((waypoints _grp) select 0); " \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="start";
+  finalStates[] =
+  {
+    "Exit_not_server",
+    "patrol",
+    "dead",
+    "delete_waypoints",
+  };
+};
+/*%FSM</COMPILE>*/
