@@ -1,3 +1,5 @@
+#include "framework\dialogs\framework.hpp"
+
 respawn = 3;
 respawnDelay = 10;
 disabledAI = 1;
