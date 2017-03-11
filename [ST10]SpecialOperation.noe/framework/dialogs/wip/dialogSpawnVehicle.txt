@@ -1,0 +1,13 @@
+/* #Qugaxi
+$[
+	1.063,
+	["VehicleSpawn",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2200,"",[1,"",["0.288594 * safezoneW + safezoneX","0.181 * safezoneH + safezoneY","0.422812 * safezoneW","0.66 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2100,"comboVehicleType",[1,"",["0.340156 * safezoneW + safezoneX","0.269 * safezoneH + safezoneY","0.319688 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1500,"listboxVehicles",[1,"",["0.345312 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.314531 * safezoneW","0.374 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"buttonSpawn",[1,"",["0.350469 * safezoneW + safezoneX","0.709 * safezoneH + safezoneY","0.108281 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"buttonClose",[1,"",["0.546406 * safezoneW + safezoneX","0.709 * safezoneH + safezoneY","0.108281 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+
+

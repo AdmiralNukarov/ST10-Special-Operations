@@ -1,0 +1,241 @@
+/*%FSM<COMPILE "D:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, main">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"start",0,250,0.000000,0.000000,68.934029,42.719757,0.000000,"start"};
+item1[] = {"isClient",4,218,86.087105,-3.432228,176.087112,46.567772,0.000000,"isClient"};
+item2[] = {"Exit_not_server",1,250,193.822571,-3.316039,283.822632,46.683945,0.000000,"Exit not" \n "server"};
+item3[] = {"is_Server",4,218,-10.875050,59.021904,79.124985,109.021896,0.000000,"is Server"};
+item4[] = {"init",2,250,-9.209723,165.973572,80.790298,215.973572,0.000000,"init"};
+item5[] = {"_",8,218,-10.188909,259.779358,79.811089,309.779358,0.000000,"" \n ""};
+item6[] = {"add_new_groups",2,250,-9.610050,369.380066,80.389984,419.380066,0.000000,"add new" \n "groups"};
+item7[] = {"MAPS2_END",4,218,110.885803,255.217712,235.256012,319.605255,0.000000,"MAPS2_END"};
+item8[] = {"maps2_end",1,250,129.269897,118.536148,219.269928,168.536133,0.000000,"maps2" \n "end"};
+item9[] = {"_",8,218,144.456726,368.719299,234.456726,418.719299,0.000000,""};
+item10[] = {"groups_update_st",2,250,277.141724,371.916565,367.141724,421.916565,0.000000,"groups" \n "update" \n "state"};
+item11[] = {"check",4,218,278.740356,457.442444,368.740356,507.442444,0.000000,"check"};
+item12[] = {"reset_groups",2,4346,281.937592,542.968323,371.937622,592.968323,0.000000,"reset" \n "groups"};
+item13[] = {"_",8,218,-6.612347,541.369690,83.387650,591.369690,0.000000,""};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {6,9};
+link8[] = {7,8};
+link9[] = {9,10};
+link10[] = {10,11};
+link11[] = {11,12};
+link12[] = {12,13};
+link13[] = {13,6};
+globals[] = {0.000000,0,0,0,0,640,480,1,151,6316128,1,-386.044464,526.764404,620.722595,-107.446342,1142,911,1};
+window[] = {2,-1,-1,-1,-1,987,250,976,250,3,1160};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "main";
+  class States
+  {
+    /*%FSM<STATE "start">*/
+    class start
+    {
+      name = "start";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "is_Server">*/
+        class is_Server
+        {
+          priority = 0.000000;
+          to="init";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "isClient">*/
+        class isClient
+        {
+          priority = 0.000000;
+          to="Exit_not_server";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"not isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Exit_not_server">*/
+    class Exit_not_server
+    {
+      name = "Exit_not_server";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "init">*/
+    class init
+    {
+      name = "init";
+      init = /*%FSM<STATEINIT""">*/"private ""_logic"";" \n
+       "private ""_temp"";" \n
+       "" \n
+       "_logic = _this select 0;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="add_new_groups";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "add_new_groups">*/
+    class add_new_groups
+    {
+      name = "add_new_groups";
+      init = /*%FSM<STATEINIT""">*/"_temp = _logic getVariable ""MAPS2_GROUPS"";" \n
+       "" \n
+       "{" \n
+       "	if(!(_x in _temp)) then" \n
+       "	{" \n
+       "		_temp = _temp + [_x];" \n
+       "	}; " \n
+       "}forEach (_logic getVariable ""MAPS2_ADDGROUPS"");" \n
+       "" \n
+       "_logic setVariable[""MAPS2_GROUPS"", _temp];" \n
+       "_logic setVariable[""MAPS2_ADDGROUPS"", []];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="groups_update_st";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "MAPS2_END">*/
+        class MAPS2_END
+        {
+          priority = 0.000000;
+          to="maps2_end";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_logic getVariable[""MAPS2_END"", false]"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "maps2_end">*/
+    class maps2_end
+    {
+      name = "maps2_end";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "groups_update_st">*/
+    class groups_update_st
+    {
+      name = "groups_update_st";
+      init = /*%FSM<STATEINIT""">*/"[_logic]call MAPS2_fnc_groupsUpdate;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "check">*/
+        class check
+        {
+          priority = 0.000000;
+          to="reset_groups";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_logic getVariable[""MAPS2_SYNC"", false]"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "reset_groups">*/
+    class reset_groups
+    {
+      name = "reset_groups";
+      init = /*%FSM<STATEINIT""">*/"_temp = _logic getVariable ""MAPS2_GROUPS"";" \n
+       "" \n
+       "{" \n
+       "	if(!isNull _x) then" \n
+       "	{" \n
+       "		if((_x getVariable ""MAPS2_STATE"") == ""RESETGROUP"") then" \n
+       "		{" \n
+       "			_temp = _temp + [[_x]call MAPS2_fnc_resetGroup];" \n
+       "		};" \n
+       "	};" \n
+       "}forEach (_logic getVariable ""MAPS2_GROUPS"");" \n
+       "" \n
+       "{" \n
+       "	if(isNull _x) then" \n
+       "	{" \n
+       "		deleteGroup _x;" \n
+       "		_temp set[_forEachIndex, ""null""]; " \n
+       "	}" \n
+       "	else" \n
+       "	{" \n
+       "		if({alive _x}count units _x == 0) then" \n
+       "		{" \n
+       "			deleteGroup _x;" \n
+       "			_temp set[_forEachIndex, ""null""]; " \n
+       "		};" \n
+       "	};" \n
+       "}forEach _temp;" \n
+       "_temp = _temp - [""null""];" \n
+       "" \n
+       "_logic setVariable[""MAPS2_GROUPS"", _temp];" \n
+       "" \n
+       "_logic setVariable[""MAPS2_SYNC"", false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="add_new_groups";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="start";
+  finalStates[] =
+  {
+    "Exit_not_server",
+    "maps2_end",
+  };
+};
+/*%FSM</COMPILE>*/
