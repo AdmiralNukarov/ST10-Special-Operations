@@ -1,7 +1,6 @@
-private["_missionArea","_weaponCrate","_nest","_group","_group1","_group2","_group3"];
+private["_missionArea","_weaponCrate","_group","_group1","_group2","_group3"];
 _missionArea = _this select 0;
 _weaponCrate = _this select 1;
-_nest = _this select 2;
 
 //[4165.86,6813.66,7] = _weaponCrate
 //[4174.42,6832.87,0] = _missionArea
