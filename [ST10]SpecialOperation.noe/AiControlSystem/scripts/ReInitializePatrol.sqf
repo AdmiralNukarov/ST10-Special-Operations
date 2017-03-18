@@ -11,7 +11,7 @@ if(count _ascParameter > 0) then
 			[_group, 
 			_ascParameter select 0,
 			_ascParameter select 1,
-			_ascParameter select 2]execVM execVM "AiControlSystem\scripts\RandomCircle.sqf";
+			_ascParameter select 2]execVM "AiControlSystem\scripts\RandomCircle.sqf";
 		};
 		
 		case "RandomRectangle":
@@ -19,12 +19,12 @@ if(count _ascParameter > 0) then
 			[_group, 
 			_ascParameter select 0,
 			_ascParameter select 1,
-			_ascParameter select 2]execVM execVM "AiControlSystem\scripts\RandomRectangle.sqf";
+			_ascParameter select 2]execVM "AiControlSystem\scripts\RandomRectangle.sqf";
 		};
 		
 		case "Waypoints":
 		{
-			[_group, _ascParameter]execVM execVM "AiControlSystem\scripts\Waypoints.sqf";
+			[_group, _ascParameter]execVM "AiControlSystem\scripts\Waypoints.sqf";
 		};
 		
 		default

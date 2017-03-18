@@ -1,9 +1,9 @@
 /*
 	Control Types:
-	- "SimpleRandomCicle"
+	- "SimpleRandomCircle"
 	- "SimpleRandomRectangle"
 	- "SimpleWaypoints"
-	- "RandomCicle"
+	- "RandomCircle"
 	- "RandomRectangle"
 	- "Waypoints"
 	

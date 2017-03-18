@@ -1,8 +1,11 @@
-private["_group","_handle","_units"];
+private["_group","_handle","_units","_wp"];
 _group = _this select 0;
 
 _handle = [_group]execVM "AiControlSystem\scripts\DeleteAllWaypoints.sqf";
 waitUntil{scriptDone _handle};
+
+_wp = _group addWaypoint[(position (leader _group)), 0];
+
 
 if(ACS_DEBUG) then
 {

@@ -10,7 +10,7 @@
 */
 private["_group","_waypointPosition","_paramsCircle","_handle"];
 _group = _this select 0;
-_paramsCircle = = [_this select 1, _this select 2, _this select 3];
+_paramsCircle = [_this select 1, _this select 2, _this select 3];
 
 _handle = _this execVM "AiControlSystem\scripts\SimpleRandomCircle.sqf";
 waitUntil{scriptDone _handle};
