@@ -5,7 +5,7 @@ respawnDelay = 10;
 disabledAI = 1;
 enableItemsDropping = 0;
 author = "[ST10]Nuka [ST10]Highfly";
-enableDebugConsole = 0;
+enableDebugConsole = 1;
 
 class Header
 {
@@ -13,4 +13,9 @@ class Header
 	minPlayers = 1;
 	maxPlayers = 24;
 	playerCountMultipleOf = 1;
+};
+
+class CfgFunctions
+{
+	#include "AiControlSystem\functions\functions.hpp"
 };
