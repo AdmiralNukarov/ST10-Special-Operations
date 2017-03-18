@@ -22,7 +22,7 @@ switch(side _group) do
 		[_unit, "jungle_rifleman_m4a1", _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 		//AR / MG
 		_unit = _group createUnit["B_T_Soldier_AR_F", _position, [], 0, "NONE"];
-		[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+		[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 		//Rifleman
 		_unit = _group createUnit["B_T_Soldier_F", _position, [], 0, "NONE"];
 		[_unit, "jungle_rifleman_m4a1", _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
@@ -38,7 +38,7 @@ switch(side _group) do
 		[_unit, "jungle_rifleman_m4a1", _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 		//AR / MG
 		_unit = _group createUnit["I_Soldier_LAT_F", _position, [], 0, "NONE"];
-		[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+		[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 		//Rifleman
 		_unit = _group createUnit["I_soldier_F", _position, [], 0, "NONE"];
 		[_unit, "jungle_rifleman_m4a1", _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";

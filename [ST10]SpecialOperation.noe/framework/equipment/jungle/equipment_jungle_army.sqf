@@ -3,7 +3,7 @@
 // Created by: Nuka [www.sealteam10.de]
 //////////////////////////////////////////////////////////////////
 
-//[unit, type equipment, bool backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+//_null = [unit, type equipment, bool backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 
 /*
 	scopes:
@@ -19,7 +19,7 @@ switch(_this select 1) do
 {	
 	case "jungle_crewman_m4a1":
 	{
-		[(_this select 0),"VSM_M81_od_shirt_Camo_SS","","","rhsusf_cvc_green_helmet","",
+		[(_this select 0),"rhsgref_uniform_woodland","","","rhsusf_cvc_green_helmet","",
 		["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 		["",_secondaryItems],
 		["",_handgunItems],
@@ -38,7 +38,6 @@ switch(_this select 1) do
 		[["hlc_30rnd_556x45_EPR",2],["SmokeShellRed",1],["SmokeShellGreen",1]],
 		[],[],[]]execVM "framework\equipment\scripts\equipment_server.sqf";
 	};
-	comment "Exported from Arsenal by Nuka";
 
 	case "jungle_pilot_jet_m9":
 	{
@@ -55,7 +54,7 @@ switch(_this select 1) do
 	{
 		if(_this select 2) then
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","VSM_M81_Backpack_Kitbag","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle_m203",(["hlc_30rnd_556x45_EPR","rhs_mag_M441_HE"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -67,7 +66,7 @@ switch(_this select 1) do
 		}
 		else
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle_m203",(["hlc_30rnd_556x45_EPR","rhs_mag_M441_HE"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -82,7 +81,7 @@ switch(_this select 1) do
 	{
 		if(_this select 2) then
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","VSM_M81_Backpack_Kitbag","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -94,7 +93,7 @@ switch(_this select 1) do
 		}
 		else
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -109,7 +108,7 @@ switch(_this select 1) do
 	{
 		if(_this select 2) then
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","VSM_M81_Backpack_Kitbag","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["hlc_lmg_M60E4",(["hlc_100Rnd_762x51_M_M60E4"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -121,7 +120,7 @@ switch(_this select 1) do
 		}
 		else
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["hlc_lmg_M60E4",(["hlc_100Rnd_762x51_M_M60E4"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -131,13 +130,40 @@ switch(_this select 1) do
 			[],[]]execVM "framework\equipment\scripts\equipment_server.sqf";
 		};
 	};
-
-	case "jungle_automaticrifleman_m249_short_para":
+	
+	case "jungle_maschinegunner_minimi_long":
 	{
 		if(_this select 2) then
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","VSM_M81_Backpack_Kitbag","usm_helmet_pasgt_w","",
-			["rhs_weap_m249_pip_S_para",(["rhs_200rnd_556x45_M_SAW"] + _primaryItems)],
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
+			["hlc_lmg_minimi",(["hlc_200rnd_556x45_M_SAW"] + _primaryItems)],
+			["",_secondaryItems],
+			["",_handgunItems],
+			["ItemMap","ItemCompass","ItemWatch"],[],
+			[["ACE_fieldDressing",2],["ACE_EarPlugs",1]],
+			[["hlc_200rnd_556x45_M_SAW",1],["rhs_mag_m67",2]],
+			[["hlc_200rnd_556x45_M_SAW",3],["rhs_mag_m67",2],["SmokeShellGreen",2],["SmokeShellRed",2],["SmokeShell",2]],
+			[]]execVM "framework\equipment\scripts\equipment_server.sqf";
+		}
+		else
+		{
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
+			["hlc_lmg_minimi",(["hlc_200rnd_556x45_M_SAW"] + _primaryItems)],
+			["",_secondaryItems],
+			["",_handgunItems],
+			["ItemMap","ItemCompass","ItemWatch"],[],
+			[["ACE_fieldDressing",2],["ACE_EarPlugs",1]],
+			[["hlc_200rnd_556x45_M_SAW",1],["rhs_mag_m67",2]],
+			[],[]]execVM "framework\equipment\scripts\equipment_server.sqf";
+		};
+	};
+
+	case "jungle_automaticrifleman_m249_pip_long":
+	{
+		if(_this select 2) then
+		{
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
+			["rhs_weap_m249_pip_L",(["rhs_200rnd_556x45_M_SAW"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
 			["ItemMap","ItemCompass","ItemWatch"],[],
@@ -148,8 +174,8 @@ switch(_this select 1) do
 		}
 		else
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
-			["rhs_weap_m249_pip_S_para",(["rhs_200rnd_556x45_M_SAW"] + _primaryItems)],
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
+			["rhs_weap_m249_pip_L",(["rhs_200rnd_556x45_M_SAW"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
 			["ItemMap","ItemCompass","ItemWatch"],[],
@@ -161,7 +187,7 @@ switch(_this select 1) do
 	
 	case "jungle_antitank_m4a1_at4_heat":
 	{
-		[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+		[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["tf47_at4_heat",(["tf47_at4_m_HEAT"] + _secondaryItems)],
 			["",_handgunItems],
@@ -173,7 +199,7 @@ switch(_this select 1) do
 	
 	case "jungle_antitank_m4a1_at4_hedp":
 	{
-		[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+		[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["tf47_at4_HEDP",(["tf47_at4_m_HEDP"] + _secondaryItems)],
 			["",_handgunItems],
@@ -185,7 +211,7 @@ switch(_this select 1) do
 	
 	case "jungle_antitank_m4a1_at4_hp":
 	{
-		[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+		[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["tf47_at4_HP",(["tf47_at4_m_HP"] + _secondaryItems)],
 			["",_handgunItems],
@@ -197,7 +223,7 @@ switch(_this select 1) do
 	
 	case "jungle_antitank_m4a1_nlaw":
 	{
-		[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+		[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["launch_NLAW_F",(["ACE_PreloadedMissileDummy"] + _secondaryItems)],
 			["",_handgunItems],
@@ -211,7 +237,7 @@ switch(_this select 1) do
 	{
 		if(_this select 2) then
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","VSM_M81_Backpack_Kitbag","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -223,7 +249,7 @@ switch(_this select 1) do
 		}
 		else
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["rhs_weap_m4a1_carryhandle",(["hlc_30rnd_556x45_EPR"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -234,11 +260,11 @@ switch(_this select 1) do
 		};
 	};
 
-	case "jungle_rifleman_m4a1":
+	case "jungle_marksman_m21":
 	{
 		if(_this select 2) then
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","VSM_M81_Backpack_Kitbag","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh",(selectRandom ["rhssaf_kitbag_md2camo","rhssaf_kitbag_smb"]),(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["hlc_rifle_M21",(["hlc_20Rnd_762x51_B_M14","hlc_optic_artel_m14"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -250,7 +276,7 @@ switch(_this select 1) do
 		}
 		else
 		{
-			[(_this select 0),"VSM_M81_od_shirt_Camo_SS","LOP_V_Chestrig_Kamysh","","usm_helmet_pasgt_w","",
+			[(_this select 0),"rhsgref_uniform_woodland","LOP_V_Chestrig_Kamysh","",(selectRandom ["rhssaf_helmet_m97_md2camo","rhssaf_helmet_m97_olive_nocamo"]),"",
 			["hlc_rifle_M21",(["hlc_20Rnd_762x51_B_M14","hlc_optic_artel_m14"] + _primaryItems)],
 			["",_secondaryItems],
 			["",_handgunItems],
@@ -269,3 +295,5 @@ switch(_this select 1) do
 };
 
 (_this select 0) setSpeaker (["Male01GRE","Male02GRE","Male03GRE","Male04GRE","Male05GRE","Male06GRE"]call BIS_fnc_selectRandom);
+(_this select 0) setSkill 0.9;
+(_this select 0) setskill ["courage",1];

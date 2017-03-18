@@ -13,7 +13,7 @@
 */
 _CLASS_RIFLEMAN = ["rebel_coltcarbine","rebel_ak47","rebel_akm","rebel_sig510","rebel_M1903A1","rebel_M14"];
 _CLASS_AMMOCARRIER = ["rebel_coltcarbine_ammocarrier","rebel_ak47_ammocarrier","rebel_akm_ammocarrier","rebel_sig510_ammocarrier","rebel_M1903A1_ammocarrier","rebel_M14_ammocarrier"];
-_CLASS_MG = ["rebel_m60","rebel_pkm"];
+_CLASS_MG = ["rebel_pkm"]; //"rebel_m60" >> sound bug
 _CLASS_AT = ["rebel_coltcarbine_rgp7v","rebel_ak47_rgp7v","rebel_akm_rgp7v","rebel_sig510_rgp7v","rebel_M1903A1_rgp7v","rebel_M14_rgp7v",
 "rebel_coltcarbine_m72a7","rebel_ak47_m72a7","rebel_akm_m72a7","rebel_sig510_m72a7","rebel_M1903A1_m72a7","rebel_M14_m72a7"];
 

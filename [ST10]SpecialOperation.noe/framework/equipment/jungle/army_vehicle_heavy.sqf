@@ -138,7 +138,7 @@ switch(_this select 2) do
 				
 				//cargo
 				_unit = _group createUnit["B_T_Soldier_AR_F", _position, [], 0, "NONE"];
-				[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+				[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 				_unit moveInCargo _vehicle;
 				//cargo
 				_unit = _group createUnit["B_T_Soldier_LAT_F", _position, [], 0, "NONE"];
@@ -188,7 +188,7 @@ switch(_this select 2) do
 				
 				//cargo
 				_unit = _group createUnit["I_Soldier_LAT_F", _position, [], 0, "NONE"];
-				[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+				[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 				_unit moveInCargo _vehicle;
 				//cargo
 				_unit = _group createUnit["I_Soldier_AT_F", _position, [], 0, "NONE"];
@@ -261,7 +261,7 @@ switch(_this select 2) do
 				
 				//cargo
 				_unit = _group createUnit["B_T_Soldier_AR_F", _position, [], 0, "NONE"];
-				[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+				[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 				_unit moveInCargo _vehicle;
 				//cargo
 				_unit = _group createUnit["B_T_Soldier_LAT_F", _position, [], 0, "NONE"];
@@ -311,7 +311,7 @@ switch(_this select 2) do
 				
 				//cargo
 				_unit = _group createUnit["I_Soldier_LAT_F", _position, [], 0, "NONE"];
-				[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+				[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 				_unit moveInCargo _vehicle;
 				//cargo
 				_unit = _group createUnit["I_Soldier_AT_F", _position, [], 0, "NONE"];
@@ -384,7 +384,7 @@ switch(_this select 2) do
 				
 				//cargo
 				_unit = _group createUnit["B_T_Soldier_AR_F", _position, [], 0, "NONE"];
-				[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+				[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 				_unit moveInCargo _vehicle;
 				//cargo
 				_unit = _group createUnit["B_T_Soldier_LAT_F", _position, [], 0, "NONE"];
@@ -434,7 +434,7 @@ switch(_this select 2) do
 				
 				//cargo
 				_unit = _group createUnit["I_Soldier_LAT_F", _position, [], 0, "NONE"];
-				[_unit, ["jungle_automaticrifleman_m249_short_para","jungle_maschinegunner_m60a4"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
+				[_unit, ["jungle_automaticrifleman_m249_pip_long","jungle_maschinegunner_minimi_long"]call BIS_fnc_selectRandom, _backpack]execVM "framework\equipment\jungle\equipment_jungle_army.sqf";
 				_unit moveInCargo _vehicle;
 				//cargo
 				_unit = _group createUnit["I_Soldier_AT_F", _position, [], 0, "NONE"];

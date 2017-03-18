@@ -579,3 +579,8 @@ switch(_this select 1) do
 		[(_this select 0), "","","","","",["",[]],["",[]],["",[]],[],[],[],[],[],[]]execVM "framework\equipment\scripts\equipment_server.sqf";
 	};
 };
+
+
+(_this select 0) setSpeaker (["Male01GRE","Male02GRE","Male03GRE","Male04GRE","Male05GRE","Male06GRE"]call BIS_fnc_selectRandom);
+(_this select 0) setSkill 0.9;
+(_this select 0) setskill ["courage",1];
