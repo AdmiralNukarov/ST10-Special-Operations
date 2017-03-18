@@ -1,0 +1,21 @@
+#include "framework\dialogs\framework.hpp"
+
+respawn = 3;
+respawnDelay = 10;
+disabledAI = 1;
+enableItemsDropping = 0;
+author = "[ST10]Nuka [ST10]Highfly";
+enableDebugConsole = 1;
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 24;
+	playerCountMultipleOf = 1;
+};
+
+class CfgFunctions
+{
+	#include "AiControlSystem\functions\functions.hpp"
+};
