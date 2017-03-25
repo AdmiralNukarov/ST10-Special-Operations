@@ -58,7 +58,7 @@ flag_spawn_water addAction["<t size='1.2'>= Spawn Vehicle (Water) =</t>",{
 
 //##########################################################################################################
 []execVM "scripts\PlayerParams.sqf";
-flag_usa addAction["<t color='#d1d1d1'>= Missions =</t>", {createDialog "dialogMissions";}];
+flag_usa addAction["<t size='1.2' color='#d1d1d1'>= Missionsauswahl =</t>", {createDialog "dialogMissions";}];
 
 player addEventHandler["Respawn",
 {
