@@ -1,8 +1,10 @@
+
 if(!isServer) exitWith{};
 missionNamespace setVariable ["MISSION_ACTIVE", true, true];
 
 private["_center","_group1","_group2","_group3","_units","_handle","_taskID","_marker"];
 _center = selectRandom NUKA_MISSION_PARAM_KILL_ALL_JUNGLE_REBELS;
+
 
 _group1 = createGroup RESISTANCE;
 _handle = [_group1, _center, [(3 + round(random 2)),(1 + round(random 1)),(1 + round(random 1)),(1 + round(random 1))]]execVM "framework\equipment\jungle\rebels_random_resistance.sqf";
@@ -36,10 +38,12 @@ sleep 2;
 
 while{true} do
 {
+
 	if(missionNamespace getVariable ["MISSION_CANCEL", false]) exitWith
 	{
 		[_taskID, "canceled", "Kill all Rebels.", "A group of rebels was seen in this area. Kill 'em all!", "", [], "", true]execVM "framework\taskms\changeTask.sqf";
 		missionNamespace setVariable ["MISSION_CANCEL", false, true];
+
 	};
 
 	if({alive _x}count _units == 0) exitWith
@@ -57,4 +61,6 @@ deleteMarker _marker;
 
 {
 	deleteGroup _x;
+
 }forEach [_group1, _group2, _group3];
+
