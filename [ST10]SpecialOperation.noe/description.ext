@@ -1,4 +1,5 @@
 #include "framework\dialogs\framework.hpp"
+#include "dialogs\dialogMissions.hpp"
 
 respawn = 3;
 respawnDelay = 10;
@@ -18,4 +19,28 @@ class Header
 class CfgFunctions
 {
 	#include "AiControlSystem\functions\functions.hpp"
+};
+
+class Params
+{
+	class ViewDistance
+	{
+		title = "View Distance";
+		values[] = {4000,5000,6000,7000,8000,9000,10000,11000,12000};
+		default = 10000;
+	};
+	class Teleporter
+	{
+		title = "Teleporter";
+		texts[] = {"Deactivated","Activated"};
+		values[] = {0,1};
+		default = 0;
+	};
+	class Arsenal
+	{
+		title = "Arsenal";
+		texts[] = {"Base","Everywhere"};
+		values[] = {0,1};
+		default = 0;
+	};
 };

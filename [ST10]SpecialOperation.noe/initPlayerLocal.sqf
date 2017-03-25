@@ -1,9 +1,19 @@
-setViewDistance 10000;
-if(didJIP) then
-{
-	[]execVM "framework\taskms\initTaskMS.sqf";
-};
+//#############################//
+//##### Map (port folder) #####//
+//#############################//
+[]execVM "port\Nogova.sqf";
+//#############################//
 
+
+
+
+setViewDistance ("ViewDistance" call BIS_fnc_getParamValue);
+[]execVM "framework\taskms\initTaskMS.sqf";
+
+
+
+
+//##########################################################################################################
 //Framework Spawn Vehicle
 FRAMEWORK_SPAWN_VEHICLE_CAR = ["B_MRAP_01_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","B_LSV_01_armed_F","B_LSV_01_unarmed_F","B_Quadbike_01_F","B_T_LSV_01_armed_F","B_T_LSV_01_unarmed_F","O_MRAP_02_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F","O_LSV_02_armed_F","O_LSV_02_unarmed_F","O_T_MRAP_02_ghex_F","O_T_MRAP_02_gmg_ghex_F","O_T_MRAP_02_hmg_ghex_F","O_T_LSV_02_armed_F","O_T_LSV_02_unarmed_F","I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","B_G_Offroad_01_F","B_G_Offroad_01_armed_F","rhsusf_rg33_wd","rhsusf_rg33_m2_wd","rhsusf_rg33_d","rhsusf_rg33_m2_d","rhsusf_rg33_usmc_wd","rhsusf_rg33_m2_usmc_wd","rhsusf_rg33_usmc_d","rhsusf_rg33_m2_usmc_d","rhsusf_m1025_w_m2","rhsusf_m1025_w_mk19","rhsusf_m1025_w","rhsusf_m998_w_2dr_fulltop","rhsusf_m998_w_2dr_halftop","rhsusf_m998_w_2dr","rhsusf_m998_w_4dr_fulltop","rhsusf_m998_w_4dr_halftop","rhsusf_m998_w_4dr","rhsusf_m1025_d_m2","rhsusf_m1025_d_Mk19","rhsusf_m1025_d","rhsusf_m998_d_2dr_fulltop","rhsusf_m998_d_2dr_halftop","rhsusf_m998_d_2dr","rhsusf_m998_d_4dr_fulltop","rhsusf_m998_d_4dr_halftop","rhsusf_m998_d_4dr","rhsusf_m1025_w_s_m2","rhsusf_m1025_w_s_Mk19","rhsusf_m1025_w_s","rhsusf_m998_w_s_2dr_halftop","rhsusf_m998_w_s_2dr","rhsusf_m998_w_s_2dr_fulltop","rhsusf_m998_w_s_4dr_halftop","rhsusf_m998_w_s_4dr","rhsusf_m998_w_s_4dr_fulltop","rhsusf_m1025_d_s_m2","rhsusf_m1025_d_s_Mk19","rhsusf_m1025_d_s","rhsusf_m998_d_s_2dr_halftop","rhsusf_m998_d_s_2dr","rhsusf_m998_d_s_2dr_fulltop","rhsusf_m998_d_s_4dr_halftop","rhsusf_m998_d_s_4dr","rhsusf_m998_d_s_4dr_fulltop","rhs_tigr_msv","rhs_tigr_3camo_msv","rhs_tigr_sts_msv","rhs_tigr_sts_3camo_msv","rhs_tigr_m_msv","rhs_tigr_m_3camo_msv","RHS_UAZ_MSV_01","rhs_uaz_open_MSV_01","rhs_tigr_vdv","rhs_tigr_3camo_vdv","rhs_tigr_sts_vdv","rhs_tigr_sts_3camo_vdv","rhs_tigr_m_vdv","rhs_tigr_m_3camo_vdv","rhs_uaz_vdv","rhs_uaz_open_vdv","rhs_tigr_vmf","rhs_tigr_3camo_vmf","rhs_tigr_sts_vmf","rhs_tigr_sts_3camo_vmf","rhs_tigr_m_vmf","rhs_tigr_m_3camo_vmf","rhs_uaz_vmf","rhs_uaz_open_vmf","rhs_tigr_vv","rhs_tigr_3camo_vv","rhs_tigr_sts_vv","rhs_tigr_sts_3camo_vv","rhs_tigr_m_vv","rhs_tigr_m_3camo_vv","rhs_uaz_vv","rhs_uaz_open_vv","rhsgref_cdf_reg_uaz","rhsgref_cdf_reg_uaz_ags","rhsgref_cdf_reg_uaz_dshkm","rhsgref_cdf_reg_uaz_open","rhsgref_cdf_reg_uaz_spg9","rhsgref_nat_uaz","rhsgref_nat_uaz_ags","rhsgref_nat_uaz_dshkm","rhsgref_nat_uaz_open","rhsgref_nat_uaz_spg9"];
 FRAMEWORK_SPAWN_VEHICLE_TRUCK = ["B_Truck_01_mover_F","B_Truck_01_box_F","B_Truck_01_medical_F","B_Truck_01_transport_F","B_Truck_01_covered_F","O_Truck_02_medical_F","O_Truck_02_transport_F","O_Truck_02_covered_F","O_Truck_03_medical_F","O_Truck_03_transport_F","O_Truck_03_covered_F","O_T_Truck_03_medical_ghex_F","O_T_Truck_03_transport_ghex_F","O_T_Truck_03_covered_ghex_F","I_Truck_02_medical_F","I_Truck_02_transport_F","I_Truck_02_covered_F","C_Van_01_transport_F","C_Van_01_box_F","B_G_Van_01_transport_F","rhsusf_M1078A1P2_wd_fmtv_usarmy","rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_wd_open_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy","rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy","rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_M2_wd_open_fmtv_usarmy","rhsusf_M1083A1P2_wd_fmtv_usarmy","rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy","rhsusf_M1083A1P2_wd_open_fmtv_usarmy","rhsusf_M1083A1P2_B_wd_fmtv_usarmy","rhsusf_M1083A1P2_B_wd_flatbed_fmtv_usarmy","rhsusf_M1083A1P2_B_wd_open_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_wd_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_wd_flatbed_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_wd_open_fmtv_usarmy","rhsusf_M977A4_usarmy_wd","rhsusf_M977A4_BKIT_usarmy_wd","rhsusf_M977A4_BKIT_M2_usarmy_wd","rhsusf_M1078A1P2_d_fmtv_usarmy","rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_d_open_fmtv_usarmy","rhsusf_M1078A1P2_B_d_fmtv_usarmy","rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_d_open_fmtv_usarmy","rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy","rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_M2_d_open_fmtv_usarmy","rhsusf_M1083A1P2_d_fmtv_usarmy","rhsusf_M1083A1P2_d_flatbed_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy","rhsusf_M1083A1P2_d_open_fmtv_usarmy","rhsusf_M1083A1P2_B_d_fmtv_usarmy","rhsusf_M1083A1P2_B_d_flatbed_fmtv_usarmy","rhsusf_M1083A1P2_B_d_open_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_d_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_d_flatbed_fmtv_usarmy","rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy","rhsusf_M977A4_usarmy_d","rhsusf_M977A4_BKIT_usarmy_d","rhsusf_M977A4_BKIT_M2_usarmy_d","rhs_gaz66_msv","rhs_gaz66_flat_msv","rhs_gaz66o_msv","rhs_gaz66o_flat_msv","rhs_gaz66_r142_msv","rhs_gaz66_ap2_msv","RHS_Ural_MSV_01","RHS_Ural_Flat_MSV_01","RHS_Ural_Open_MSV_01","RHS_Ural_Open_Flat_MSV_01","rhs_gaz66_vdv","rhs_gaz66_flat_vdv","rhs_gaz66o_vdv","rhs_gaz66o_flat_vdv","rhs_gaz66_r142_vdv","rhs_gaz66_ap2_vdv","RHS_Ural_VDV_01","RHS_Ural_Flat_VDV_01","RHS_Ural_Open_VDV_01","RHS_Ural_Open_Flat_VDV_01","rhs_gaz66_vmf","rhs_gaz66_flat_vmf","rhs_gaz66o_vmf","rhs_gaz66o_flat_vmf","rhs_gaz66_r142_vmf","rhs_gaz66_ap2_vmf","RHS_Ural_VMF_01","RHS_Ural_Flat_VMF_01","RHS_Ural_Open_VMF_01","RHS_Ural_Open_Flat_VMF_01","rhs_gaz66_vv","rhs_gaz66_flat_vv","rhs_gaz66o_vv","rhs_gaz66o_flat_vv","rhs_gaz66_r142_vv","rhs_gaz66_ap2_vv","RHS_Ural_VV_01","RHS_Ural_Flat_VV_01","RHS_Ural_Open_VV_01","RHS_Ural_Open_Flat_VV_01","rhsgref_cdf_gaz66","rhsgref_cdf_gaz66_flat","rhsgref_cdf_gaz66o","rhsgref_cdf_gaz66o_flat","rhsgref_cdf_gaz66_r142","rhsgref_cdf_gaz66_ap2","rhsgref_cdf_ural","rhsgref_cdf_ural_open"];
@@ -44,8 +54,11 @@ flag_spawn_water addAction["<t size='1.2'>= Spawn Vehicle (Water) =</t>",{
 }];
 
 
-player addAction["<t color='#1f84e1'>= Teleporter =</t>", {createDialog "dialogFrameworkTeleporter";}];
-player addAction["<t color='#e50ed1'>= Arsenal =</t>", {["Open",true] spawn BIS_fnc_arsenal;}, [], 1, false, true, "", "(vehicle player) == player"];
+
+
+//##########################################################################################################
+[]execVM "scripts\PlayerParams.sqf";
+flag_usa addAction["<t size='1.2' color='#d1d1d1'>= Missionsauswahl =</t>", {createDialog "dialogMissions";}];
 
 player addEventHandler["Respawn",
 {
@@ -55,6 +68,5 @@ player addEventHandler["Respawn",
 	
 	deleteVehicle _corpse;
 	
-	_unit addAction["<t color='#1f84e1'>= Teleporter =</t>", {createDialog "dialogFrameworkTeleporter";}];
-	_unit addAction["<t color='#e50ed1'>= Arsenal =</t>", {["Open",true] spawn BIS_fnc_arsenal;}, [], 1, false, true, "", "(vehicle player) == player"];
+	[]execVM "scripts\PlayerParams.sqf";
 }];

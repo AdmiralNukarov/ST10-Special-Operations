@@ -18,7 +18,7 @@ FRAMEWORK_TASK_LIST pushBack _task;
 
 publicVariable "FRAMEWORK_TASK_LIST";
 
-if(local player) then
+if(local player && isServer) then
 {
 	FRAMEWORK_TASK_LIST execVM "framework\taskms\updatePlayer.sqf";
 };
