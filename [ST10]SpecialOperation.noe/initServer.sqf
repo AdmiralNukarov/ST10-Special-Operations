@@ -6,8 +6,9 @@
 
 #include "AiControlSystem\constants.sqf";
 
-setViewDistance 10000;
+setViewDistance ("ViewDistance" call BIS_fnc_getParamValue);
 []execVM "framework\taskms\initTaskMS.sqf";
+
 missionNamespace setVariable ["MISSION_CANCEL", false, true];
 missionNamespace setVariable ["MISSION_ACTIVE", false, true];
 
